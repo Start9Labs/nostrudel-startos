@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/hzrd149/nostrudel/next/screenshots/icon.svg" alt="Project Logo" width="21%">
+  <img src="https://raw.githubusercontent.com/hzrd149/nostrudel/master/screenshots/icon.svg" alt="Project Logo" width="21%">
 </p>
 
 # noStrudel for StartOS
