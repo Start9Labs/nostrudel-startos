@@ -4,69 +4,48 @@
 
 # noStrudel for StartOS
 
-[noStrudel](https://github.com/hzrd149/nostrudel) is a Nostr web client for exploring the Nostr network. This repository creates the s9pk package that is installed to run noStrudel on StartOS.
+[noStrudel](https://github.com/hzrd149/nostrudel) is a Nostr web client for exploring the Nostr network. This repository creates the `s9pk` package that is installed to run `noStrudel` on [StartOS](https://github.com/Start9Labs/start-os/).
 
 ## Dependencies
 
-Install the system dependencies below to build this project by following the instructions in the provided links. You can also find detailed steps to setup your environment in the service packaging [documentation](https://github.com/Start9Labs/service-pipeline#development-environment).
+Prior to building the `nostrudel.s9pk` package, it's essential to configure your build environment for StartOS services. You can find instructions on how to set up the appropriate build environment in the [Packaging Guide](https://staging.docs.start9.com/packaging-guide/).
 
 - [docker](https://docs.docker.com/get-docker)
 - [docker-buildx](https://docs.docker.com/buildx/working-with-buildx/)
-- [yq](https://mikefarah.gitbook.io/yq)
-- [deno](https://deno.land/)
 - [make](https://www.gnu.org/software/make/)
-- [start-sdk](https://github.com/Start9Labs/start-os/tree/master/backend)
+- [start-cli](https://github.com/Start9Labs/start-cli/)
 
 ## Cloning
 
 Clone the noStrudel package repository locally.
 
 ```
-git clone https://github.com/hzrd149/nostrudel-startos.git
+git clone https://github.com/Start9Labs/nostrudel-startos.git
 cd nostrudel-startos
 ```
 
 ## Building
 
-To build the `nostrudel` package for all platforms using start-sdk, run the following command:
+To build the **noStrudel** service as a universal package, run the following command:
 
 ```
 make
 ```
 
-To build the `nostrudel` package for a single platform using start-sdk, run:
-
-```
-# for amd64
-make x86
-```
-or
-```
-# for arm64
-make arm
-```
-
 ## Installing (on StartOS)
 
-Run the following commands to determine successful install:
+Before installation, define `host: https://server-name.local` in your `~/.startos/config.yaml` config file then run the following commands to determine successful install:
+
 > :information_source: Change server-name.local to your Start9 server address
-
-```
-start-cli auth login
-# Enter your StartOS password
-start-cli --host https://server-name.local package install nostrudel.s9pk
-```
-
-If you already have your `start-cli` config file setup with a default `host`, you can install simply by running:
 
 ```
 make install
 ```
 
-> **Tip:** You can also install the nostrudel.s9pk using **Sideload Service** under the **System > Manage** section.
+**Tip:** You can also install the `nostrudel.s9pk` by using the **Sideload** tab available in the top menu of the StartOS UI.
 
-### Verify Install
+## Verify Install
 
-Go to your StartOS Services page, select **noStrudel**, configure and start the service. Then, verify its interfaces are accessible.
+Go to your StartOS Services page, select **noStrudel**, configure and start the service.
 
 **Done!**
