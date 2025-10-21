@@ -1,20 +1,21 @@
 id: nostrudel
 title: "noStrudel"
-version: 0.45.0.0
+version: 0.46.1.0
 release-notes: |
-  ### Minor Changes
-  * Add setting for NIP-17 DM relays
-  * Support NIP-17 group messages
-  * Add NIP-17 message inbox for decrypting messages
-  * Show NIP-17 messages in direct message view
-  * Add messages cache for direct messages
-  * Add DM conversation info drawer
-  * Redesign direct messages UI
-  * Add profile editor to settings
-  * Add preview to profile editor
-
+  ## 0.46.1
   ### Patch Changes
-  * Remove unused dependencies
+  * Fix issue with application hanging from capacitorjs modules
+  * Fix elements under nav bar on mobile
+  ## 0.46.0
+  ### Minor Changes
+  * Add option for custom share service (njump.me)
+  * Add article reader component using native web TTS API
+  * Show favorite relays in discovery view
+  * Add relay feed to discovery view
+  * Redesign user profile navigation
+  ### Patch Changes
+  * Fix open graph link images not being blured
+  * Fix ncrypsec accounts not prompting for decryption password
 license: MIT
 wrapper-repo: "https://github.com/hzrd149/nostrudel-startos"
 upstream-repo: "https://github.com/hzrd149/nostrudel"
