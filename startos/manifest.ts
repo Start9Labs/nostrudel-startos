@@ -25,7 +25,7 @@ export const manifest = setupManifest({
   images: {
     nostrudel: {
       source: {
-        dockerTag: 'ghcr.io/hzrd149/nostrudel:0.45.0',
+        dockerTag: 'ghcr.io/hzrd149/nostrudel:0.46.1',
       },
       arch: architectures
     } as SDKImageInputSpec,
